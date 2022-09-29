@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": ".",
+    "target": "ES6",
+    "alwaysStrict": true,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
