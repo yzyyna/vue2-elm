@@ -36,7 +36,7 @@ compiler.plugin("compilation", function (compilation) {
 });
 
 var context = config.dev.context;
-console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+console.log("process.env.NODE_ENV", process.env.NODE_ENV, config.dev.context);
 switch (process.env.NODE_ENV) {
   case "local":
     var proxypath = "http://localhost:8001";
