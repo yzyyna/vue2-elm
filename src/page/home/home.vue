@@ -5,11 +5,11 @@
     </head-top>
     <nav class="city_nav">
       <div class="city_tip">
-        <span>current city：</span>
-        <span>error please select a city</span>
+        <span>current</span>
+        <!-- <span>error please select a city</span> -->
       </div>
       <router-link :to="'/city/' + guessCityid" class="guess_city">
-        <span>{{ guessCity }}</span>
+        <span>{{}}</span>
         <svg class="arrow_right">
           <use
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -18,8 +18,16 @@
         </svg>
       </router-link>
     </nav>
+    <div id="test-app">
+      <img
+        alt="ddddd"
+        title="dddddddd"
+        src="http://www.fortrustyun.com/../../Images/GeneratorSet/genseta3fee881-b80c-4b02-80d4-cd24caefdf7e.jpg"
+        style="height: 100px"
+      />
+    </div>
     <section id="hot_city_container">
-      <h4 class="city_title">热门城市</h4>
+      <h4 class="city_title">{{}}</h4>
       <ul class="citylistul clear">
         <router-link
           tag="li"
@@ -31,7 +39,7 @@
         </router-link>
       </ul>
     </section>
-    <section class="group_city_container">
+    <section v-show="false" class="group_city_container">
       <ul class="letter_classify">
         <li
           v-for="(value, key, index) in sortgroupcity"
@@ -82,7 +90,6 @@ export default {
 
     //获取热门城市
     hotcity().then((res) => {
-      console.log("get hot cities", res);
       this.hotcity = res;
     });
 
@@ -201,5 +208,12 @@ export default {
       color: #666;
     }
   }
+}
+li,
+div,
+a,
+nav {
+  background-color: $black;
+  color: $text-color !important;
 }
 </style>

@@ -4,8 +4,9 @@ export default async (url = "", data = {}, type = "GET", method = "fetch") => {
   type = type.toUpperCase();
   url = baseUrl + url;
   console.log(
-    `*** Devil fetch.js ***\n
-    url:'${url}',\n
+    `%c*** Devil fetch.js ***\n`,
+    "background:tomato",
+    `url:'${url}',\n
     baseUrl:'${baseUrl}',\n
     process.env.NODE_ENV:'${process.env.NODE_ENV}'\n
     data:`
@@ -46,7 +47,8 @@ export default async (url = "", data = {}, type = "GET", method = "fetch") => {
       const response = await fetch(url, requestConfig);
       const responseJson = await response.json();
       console.log(
-        "*** Devil responseJson ***\n",
+        "%c*** Devil fetch.js responseJson ***\n",
+        "background:green",
         responseJson,
         "\n",
         requestConfig,

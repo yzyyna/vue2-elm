@@ -1,12 +1,5 @@
 <template>
   <div>
-    <div id="test-app">
-      <img
-        alt="ddddd"
-        src="http://www.fortrustyun.com/../../Images/GeneratorSet/genseta3fee881-b80c-4b02-80d4-cd24caefdf7e.jpg"
-        style="width: 100%"
-      />
-    </div>
     <transition name="router-fade" mode="out-in">
       <keep-alive>
         <router-view v-if="$route.meta.keepAlive"></router-view>
